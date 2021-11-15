@@ -10,15 +10,14 @@ int d5 = 4;
 int d6 = 3;
 int d7 = 2;
 
-String arr[6] {"Ground Control to Major Tom
-Ground Control to Major Tom
-"Take your protein pills", "and", "put your helmet on"
-"Ground Control to Major Tom", ("ten", "nine", "eight", "seven", "six"
-Commencing countdown, engines on "five", "four", "three"
-Check ignition and may Gods love be with you (two, one, liftoff)}
-
+String arr[19] {"ground control...", " to major tom",
+"take your protein pills", "and", "put your helmet on",
+"ground control..", "to major tom", "ten", "nine", "eight", "seven", "six"
+"commencing countdown, engines on", "five", "four", "three",
+"check ignition and may gods love be with you","two", "one", "liftoff"};
 
 LiquidCrystal lcd(rs, rw, e, d4, d5,d6, d7);
+
 
 void setup()
 {
@@ -26,4 +25,13 @@ void setup()
 }
 
 void loop() { 
+  for(int i = 0; i < 17; i++){
+    arr[i];
+    lcd.print(arr[i]);
+    delay(1500);
+    lcd.clear();
+    if(i > 17){
+      i = 0;
+    }
+  }
 }
